@@ -21,7 +21,6 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.zip.GZIPInputStream;
 
-import net.pms.PMS;
 import net.pms.dlna.WebVideoStream;
 import net.pms.dlna.virtual.VirtualFolder;
 import net.pms.movieinfo.plugins.Plugin;

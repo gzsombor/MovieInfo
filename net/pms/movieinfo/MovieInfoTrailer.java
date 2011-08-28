@@ -13,12 +13,17 @@ public class MovieInfoTrailer extends WebVideoStream {
 
 	public MovieInfoTrailer(String name, String thumbnailIcon, String url) {
 		super(name,url,thumbnailIcon);
-		notranscodefolder = true;
 	}
 	public Player getPlayer() {
 		player = new MEncoderVideoYoutube(PMS.getConfiguration());
 		return player;
 	}
+	
+	@Override
+	public boolean isCanHaveTranscodeFolder() {
+	    return false;
+	}
+	
 	@Override
 	public InputStream getInputStream(long low, long high, double timeseek, RendererConfiguration mediaRenderer) throws IOException {
 		if (URL.toLowerCase().indexOf("youtube") > -1 && URL.toLowerCase().indexOf("?") > -1) {

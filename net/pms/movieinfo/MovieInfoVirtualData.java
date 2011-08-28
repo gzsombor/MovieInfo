@@ -21,12 +21,15 @@ public class MovieInfoVirtualData extends VirtualFolder {
 
 	public MovieInfoVirtualData(String thumbnailIcon) {
 		super(MovieInfoVirtualFolder.MOVIE_FOLDER, thumbnailIcon);
-		notranscodefolder = true;
 	}
 
 	public MovieInfoVirtualData(String name, String thumbnailIcon) {
 		super(name, thumbnailIcon);
-		notranscodefolder = true;
+	}
+	
+	@Override
+	public boolean isCanHaveTranscodeFolder() {
+	    return false;
 	}
 	public boolean isFolder(){
 		return false;

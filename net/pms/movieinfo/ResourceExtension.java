@@ -27,7 +27,7 @@ public class ResourceExtension {
 	}
 	
 	public void addChild(DLNAResource child) {
-		if (child.getExt().isVideo() && (!child.isNotranscodefolder())) {
+		if (child.getExt().isVideo() && (child.isCanHaveTranscodeFolder())) {
 			VirtualFolder vf2 = null;
 			for(DLNAResource r:original.getChildren()) {
 				if (r instanceof MovieInfoVirtualFolder) {
